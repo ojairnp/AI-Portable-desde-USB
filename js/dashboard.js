@@ -87,3 +87,32 @@ fetch("data/insight_ia.json")
   })
   .catch(function(err){ console.error("Error leyendo insight_ia.json", err); });
 
+
+// 6. Pregunta a NEXUS - IA en vivo via Cloudflare Worker
+var WORKER_URL = "https://nexus-agente-proxy.TU-SUBDOMINIO.workers.dev";
+
+function preguntarIA(){
+  var pregunta = document.getElementById("aiPregunta").value.trim();
+  var respuestaBox = document.getElementById("aiRespuesta");
+
+  if(!pregunta){
+    respuestaBox.textContent = "Escribe una pregunta primero.";
+    return;
+  }
+
+  respuestaBox.textContent = "Pensando...";
+
+  fetch(WORKER_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ pregunta: pregunta })
+  })
+    .then(function(res){ return res.json(); })
+    .then(function(data){
+      respuestaBox.textContent = data.respuesta || data.error || "Sin respuesta.";
+    })
+    .catch(function(err){
+      respuestaBox.textContent = "Error al conectar con el agente IA.";
+      console.error(err);
+    });
+}
