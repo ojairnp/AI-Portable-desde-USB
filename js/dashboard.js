@@ -89,7 +89,7 @@ fetch("data/insight_ia.json")
 
 
 // 6. Pregunta a NEXUS - IA en vivo via Cloudflare Worker
-var WORKER_URL = "https://nexus-agente-proxy.TU-SUBDOMINIO.workers.dev";
+var WORKER_URL = "https://nexus-agente-proxy.ojairnp.workers.dev";
 
 function preguntarIA(){
   var pregunta = document.getElementById("aiPregunta").value.trim();
@@ -116,3 +116,4 @@ function preguntarIA(){
       console.error(err);
     });
 }
+
