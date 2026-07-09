@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Centro de Control | NEXUS</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<nav>
+  <span class="logo">NEXUS</span>
+  <div>
+    <a href="index.html">Inicio</a>
+    <a href="dashboard.html">Centro de Control</a>
+  </div>
+</nav>
+
+<section>
+  <h2>Actividad de Desarrollo (GitHub en vivo)</h2>
+  <div class="grid">
+    <div class="card">
+      <small>Repositorios publicos</small>
+      <div class="stat-value" id="repoCount">--</div>
+    </div>
+    <div class="card">
+      <small>Lenguaje principal detectado</small>
+      <div class="stat-value" id="topLang">--</div>
+    </div>
+    <div class="card" style="grid-column:1/-1;">
+      <canvas id="langChart"></canvas>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Mercado en Vivo (Cripto)</h2>
+  <div class="grid">
+    <div class="card">
+      <small>Bitcoin (USD)</small>
+      <div class="stat-value" id="btcPrice">--</div>
+    </div>
+    <div class="card">
+      <small>Ethereum (USD)</small>
+      <div class="stat-value" id="ethPrice">--</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Simulador de Interes Compuesto</h2>
+  <div class="grid">
+    <div class="card">
+      <label>Capital inicial (USD)</label>
+      <input type="number" id="capital" value="1000">
+      <label>Tasa anual (%)</label>
+      <input type="number" id="tasa" value="10">
+      <label>Anios</label>
+      <input type="number" id="anios" value="10">
+      <button onclick="calcularInteres()">Calcular</button>
+    </div>
+    <div class="card" style="grid-column:span 2;">
+      <canvas id="interesChart"></canvas>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Telemetria Ambiental (Cancun, en vivo)</h2>
+  <div class="grid">
+    <div class="card">
+      <small>Temperatura actual</small>
+      <div class="stat-value" id="temp">--</div>
+    </div>
+    <div class="card">
+      <small>Velocidad del viento</small>
+      <div class="stat-value" id="viento">--</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Agente IA - Insight del Dia</h2>
+  <div class="card">
+    <small id="aiProveedor">Cargando proveedor...</small>
+    <p id="aiInsight" style="margin-top:10px;font-size:1.1rem;">Cargando insight...</p>
+  </div>
+</section>
+
+<footer>Datos en vivo via GitHub API, CoinGecko y Open-Meteo</footer>
+
+<script src="js/dashboard.js"></script>
+</body>
+</html>
+

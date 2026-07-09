@@ -1,0 +1,36 @@
+﻿{
+  "perfil": {
+    "nombre": "Oscar Jair Naranjo Ponce",
+    "titulo": "Arquitecto de Ecosistemas Tecnologicos | Especialista en Licitaciones | Estudiante de Telematica e IA",
+    "ubicacion": "Cancun, Mexico",
+    "resumen": "Diseno y construyo sistemas portatiles de automatizacion con IA, gestiono licitaciones publicas y opero tres marcas de moda de forma autonoma. Mi enfoque: portabilidad total, sin dependencias de nube pagada, ejecucion local con IA embebida."
+  },
+  "habilidades": [
+    "Python", "Go", "Node.js", "PowerShell",
+    "llama.cpp", "Flask", "SQLite", "Cloudflare Tunnel",
+    "Chart.js", "JavaScript Vanilla", "Automatizacion de Agentes IA"
+  ],
+  "proyectos": [
+    {
+      "nombre": "USB de Poder",
+      "categoria": "Ecosistema Portatil de IA",
+      "descripcion": "Servidor completo (proxy Go, agentes IA en Flask, catalogos en Node.js, LLM local con llama.cpp, voz con Whisper.cpp y Piper TTS) que corre desde una memoria USB sin instalacion previa.",
+      "stack": ["Go", "Python/Flask", "Node.js", "llama.cpp", "Whisper.cpp", "Piper TTS", "Cloudflare Tunnel", "SQLite"],
+      "estado": "En desarrollo activo"
+    },
+    {
+      "nombre": "AGENTES.MX",
+      "categoria": "Automatizacion Comercial con IA",
+      "descripcion": "Agentes autonomos que prospectan proveedores por correo y WhatsApp, dan seguimiento y generan contratos en PDF automaticamente para el sector moda.",
+      "stack": ["Python", "WhatsApp Business API", "ReportLab"],
+      "estado": "Diseno completo, integracion en curso"
+    },
+    {
+      "nombre": "Plataforma Multi-Marca",
+      "categoria": "E-commerce y Gestion de Marca",
+      "descripcion": "Una sola plataforma Flask con arquitectura modular por Blueprints que gestiona tres marcas (ropa activa, vestidos casuales, bolsos y accesorios) como instancias de datos, no como aplicaciones separadas.",
+      "stack": ["Flask", "SQLite", "Meta Business API", "TikTok for Business API"],
+      "estado": "En operacion"
+    }
+  ]
+}
